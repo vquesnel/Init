@@ -1,0 +1,9 @@
+#!/bin/bash
+# seven fields from /etc/passwd stored in $f1,f2...,$f7
+#
+
+while IFS=: read -r f1 f2 f3 f4 f5 f6 f7; do
+  if [[ $f1 != "#"* ]]; then
+  echo "User $f1 has $f3 for UID and stores files in $f6 directory."
+  fi
+done < /etc/passwd

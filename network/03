@@ -1,1 +1,1 @@
-networksetup -getmacaddress en1 | cut -d ' ' -f3
+networksetup -getmacaddress en1
